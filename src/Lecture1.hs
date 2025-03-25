@@ -58,7 +58,7 @@ is 25.
 
 -- Using Int with ^ doesn't work because haskell defaults to Integer for ^
 sumOfSquares :: Int -> Int -> Int
-sumOfSquares x y = (x * x) + (y * x)
+sumOfSquares x y = (x * x) + (y * y)
 {- | Implement a function that returns the last digit of a given number.
 
 >>> lastDigit 42

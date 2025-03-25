@@ -107,7 +107,10 @@ evenLists = filter (even . length)
 --
 -- 🕯 HINT: look into Data.Char and Prelude modules for functions you may use.
 dropSpaces :: String -> String
-dropSpaces s = reverse $ trimOneSide . reverse $ trimOneSide s
+dropSpaces = takeWhile (/= ' ') . dropWhile(== ' ')
+
+dropSpacesWithMultipleWords :: String -> String
+dropSpacesWithMultipleWords = reverse . trimOneSide . reverse . trimOneSide
   where
     trimOneSide :: String -> String
     trimOneSide (' ' : xs) = trimOneSide xs
